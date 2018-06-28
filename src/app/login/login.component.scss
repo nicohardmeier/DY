@@ -1,0 +1,35 @@
+@import '../../_variables';
+
+.form-container {
+	min-width: 16vw;
+	min-height: 40px;
+	background-image: linear-gradient(#d9e021, #736357);
+	font-family: $font_family_2;
+	font-size: 10px;
+	p {
+		margin: 0 5px;
+	}
+}
+form {
+	margin: 0 5px;
+}
+input {
+	line-height: 12px;
+	width: 90px;
+	border: 1px solid #333;
+}
+.submit {
+	margin: 0;
+	padding: 0;
+	height: 20px;
+	width: 35px;
+	border-radius: 50px;
+	font-family: $font_family_2;
+	font-size: 10px;
+	color: $color_1;
+	background-image: linear-gradient(#808080, #000);
+}
+.validator-message {
+	color: $color_4;
+	z-index: 999;
+}

@@ -1,0 +1,37 @@
+@import '../../_variables';
+
+.container {
+	max-width: 842px;
+	margin: 0 auto;
+}
+.img-col {
+	padding: 10px;
+}
+.img-container {
+	padding: 5px;
+	img {
+		width: 100%;
+	}
+}
+.info {
+	margin-top: 10px;
+}
+.title-container {
+	border-bottom: 2px solid #000;
+}
+.title {
+	font-size: 1.4em;
+	font-weight: 600;
+}
+.recommended {
+	margin-top: 5px;
+	float: right;
+	font-style: italic;
+	font-family: $font_family_2;
+	font-size: 0.8em;
+}
+.text {
+	font-family: $font_family_2;
+	font-size: 0.9em;
+	line-height: 1.2em;
+}

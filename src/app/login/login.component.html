@@ -1,0 +1,24 @@
+<div *ngIf="!signup && !welcome" class="form-container">
+  <p>Identificate o crea una cuenta nueva aquí mismo</p>
+  <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()" novalidate>
+    <p class="validator-message" *ngIf="showValidationMail">E-mail invalido</p>
+    <input type="email" mdInput formControlName="email" placeholder="E-mail" required>
+    <input type="password" mdInput formControlName="password" placeholder="Password" required>
+    <button class="btn submit" type="submit">OK</button>
+  </form>
+</div>
+
+<div *ngIf="signup" class="form-container">
+  <p>Por favor, confirma tus datos</p>
+  <form [formGroup]="signinForm" (ngSubmit)="onSigninSubmit()" novalidate>
+    <p class="validator-message" *ngIf="showValidationMail">E-mail invalido</p>
+    <p class="validator-message" *ngIf="showValidationConfirm">El e-mail no coincide</p>
+    <p class="validator-message" *ngIf="showValidationConfirmPassword">El password no coincide</p>
+    <input type="email" mdInput formControlName="email" placeholder="E-mail" required>
+    <input type="password" mdInput formControlName="password" placeholder="Password" required>
+    <button class="btn submit" type="submit">OK</button>
+  </form>
+</div>
+<div *ngIf="welcome" class="form-container">
+  <p>Bienvenido</p>
+</div>

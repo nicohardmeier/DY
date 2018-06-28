@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 img-col">
+      <div class="img-container">
+        <!--Aqui se podría hacer un ngFor para hacer un loop sobre todas las imagenes
+        pero por seguir el diseño y como son siempre las mismas lo he dejado sin loop.
+         También la url apunta a la carpeta "img" y las imágenes estan en una carpeta llamada "imgs"
+        la he renombrado  "img" ya que me parecio la solución más rápida" -->
+        <img class="img-responsive" src='assets/{{dish?.imgs[0].url}}'>
+      </div>
+      <div class="img-container">
+        <img class="img-responsive" src='assets/{{dish?.imgs[1].url}}'>
+      </div>
+      <div class="img-container">
+        <img class="img-responsive" src='assets/{{dish?.imgs[2].url}}'>
+      </div>
+    </div>
+    <div class="col-md-8 info">
+      <div class="title-container">
+        <h3 class="title">{{dish?.title}}</h3>
+      </div>
+      <div class="recommended">
+        <p>Recommended by {{dish?.recommended}} people</p>
+      </div>
+      <div class="clearfix"></div>
+      <p class="text" *ngFor="let p of dish?.text">{{p}}</p>
+    </div>
+  </div>
+</div>
